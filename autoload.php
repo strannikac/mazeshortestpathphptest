@@ -1,7 +1,12 @@
 <?php
-function myautoload($className) {
-    require_once str_replace('\\', DIRECTORY_SEPARATOR, $className) . '.php';
+
+function projectAutoload(String $className) {
+    $filename = str_replace('\\', DIRECTORY_SEPARATOR, $className) . '.php';
+    if(file_exists($filename)) {
+        require_once $filename;
+    }
 }
 
-spl_autoload_register('myautoload');
+spl_autoload_register('projectAutoload');
+
 ?>
