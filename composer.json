@@ -1,0 +1,8 @@
+{
+  "name": "daprime/testtask",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "phpunit/phpunit": "*"
+  }
+}
